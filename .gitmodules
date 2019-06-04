@@ -1,0 +1,3 @@
+[submodule "libs/soft-ieee754"]
+	path = libs/soft-ieee754
+	url = https://github.com/LiraNuna/soft-ieee754.git
