@@ -1,4 +1,5 @@
 CXX ?= g++
+#CXX ?= gcc
 
 # path #
 SRC_PATH = src
@@ -10,6 +11,7 @@ BIN_NAME = tinymlp
 
 # extensions #
 SRC_EXT = cpp
+#SRC_EXT = c
 
 # code lists #
 # Find all source files in the source directory, sorted by
@@ -22,7 +24,8 @@ OBJECTS = $(SOURCES:$(SRC_PATH)/%.$(SRC_EXT)=$(BUILD_PATH)/%.o)
 DEPS = $(OBJECTS:.o=.d)
 
 # flags #
-COMPILE_FLAGS = -std=c++14 -O2 -Wall -Wextra -g
+# COMPILE_FLAGS = -lm
+COMPILE_FLAGS = -std=c++14 -O2 -Wall -Wextra -g -lm
 INCLUDES = -I includes/ -I /usr/local/include -I libs/soft-ieee754/includes
 # Space-separated pkg-config libraries used by this project
 LIBS =
